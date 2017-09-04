@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;padding: 0;
+        }
+        a{
+            text-decoration: none;
+        }
+        i{ font-style: normal}
+        #main-box{
+            height: 182px;
+            color: #666;
+            width: 190px;
+            margin-left: 8px;
+        }
+        .jd-tab-box{
+            display: none;
+        }
+        ul{
+            height: 21px;
+            padding: 15px 0 0 8px;
+            overflow: hidden;
+        }
+        ul li{
+            float: left;
+            list-style: none;
+            font-size: 12px;
+            margin-right: 6px;
+            text-align: center;
+        }
+        ul li a{
+            color: #666666;
+            display: block;
+            padding: 0 2px;
+            line-height: 16px;
+            height: 21px;
+        }
+        .text-hm{
+            width: 88px;
+            height: 20px;
+            letter-spacing: -1px;
+            line-height: 20px;
+            border: 1px solid #ccc;
+            margin-left: 5px;
+            font-size: 12px;
+            outline: none;
+        }
+        .mz{
+            outline: none;
+            height: 22px;
+            border: 1px solid #ccc;
+            letter-spacing: -1px;
+        }
+        .jd-tab-box{
+            font-size: 12px;
+        }
+        .jd_from{
+            padding-top: 10px;
+            height: 23px;
+            line-height: 22px;
+            overflow: hidden;
+        }
+        .jd_from i{
+            color: #b20000;
+        }
+        .jd_from-btn{
+            height: 26px;
+            margin-top: 10px;
+            overflow: hidden;
+            margin-bottom:10px;
+        }
+        .jd_from-btn a{
+            display: block;
+            color: #FFFFFF;
+            background: #e01222;
+            width: 85px;
+            height: 25px;
+            line-height: 25px;
+            text-align: center;
+        }
+        .link-ab a s{
+            display: inline-block;
+            width: 34px;
+            height: 14px;
+            margin-right: 3px;
+            vertical-align: -3px;
+            background: url("../image/iframe-hot.png");
+        }
+        .link-ab a{
+            color: #527cdb;
+        }
+        .link-ab a:hover{
+            color: #b20000;
+        }
+        .red{
+            background: #b20000;
+            color: white;
+        }
+        .on{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div id="main-box">
+   <ul>
+       <li><a href="#" class="red">话费充值</a></li>
+       <li><a href="#">流量充值</a></li>
+       <li><a href="#">套餐变更</a></li>
+   </ul>
+   <div class="jd-tab-box on">
+       <div class="jd_from">
+           <span>号码</span><input type="text" class="text-hm"><br>
+       </div>
+       <div class="jd_from">
+           <span>面值</span>
+           <select name="mz" class="mz" id="hf-mz">
+               <option value="0">10元</option>
+               <option value="1">20元</option>
+               <option value="2">30元</option>
+               <option value="3">50元</option>
+               <option value="4" selected="selected">100元</option>
+               <option value="5">200元</option>
+               <option value="6">300元</option>
+               <option value="7">500元</option>
+           </select>
+           <i id="hf-money">￥98.0-￥100.0</i><br>
+       </div>
+       <div class="jd_from-btn"><a href="#">快速充值</a></div>
+       <p class="link-ab"><a href="#"><s></s>抢8元话费券</a></p>
+   </div>
+   <div class="jd-tab-box">
+       <div class="jd_from">
+           <span>号码</span>
+           <input type="date" class="text-hm" placeholder="移动 / 联通 / 电信">
+       </div>
+       <div class="jd_from">
+           <span>流量</span>
+           <select name="fw" class="mz fw" style="vertical-align: -1px">
+               <option value="0">全国</option>
+               <option value="1">省内</option>
+           </select>
+           <select name="mz" class="mz" style="width: 71px">
+               <option value="0" selcted="selected">50M</option>
+               <option value="1" >100M</option>
+               <option value="2">200M</option>
+               <option value="3">300M</option>
+               <option value="4">500M</option>
+           </select><br>
+       </div>
+       <p style="color:#b20000;margin-top:8px">￥19.9-￥20.5</p>
+       <div class="jd_from-btn" style="margin:5px auto"><a href="#">快速充值</a></div>
+       <p class="link-ab"><a href="#"><s></s> App Store充值卡</a></p>
+   </div>
+   <div class="jd-tab-box">
+       <div class="jd_from">
+           <span>号码</span><input type="text" class="text-hm"><br>
+       </div>
+       <div class="jd_from">
+           <span>面值</span>
+           <select name="mz" class="mz">
+               <option value="0">10元</option>
+               <option value="1">20元</option>
+               <option value="2">30元</option>
+               <option value="3">50元</option>
+               <option value="4" selected="selected">100元</option>
+               <option value="5">200元</option>
+               <option value="6">300元</option>
+               <option value="7">500元</option>
+           </select>
+           <i>￥98.0-￥100.0</i><br>
+       </div>
+       <div class="jd_from-btn"><a href="#">办理变更</a></div>
+       <p class="link-ab"><a href="#"><s></s>最低18元</a></p>
+   </div>
+</div>
+<script src="../JS/jquery-1.11.1.min.js"></script>
+<script>
+    var arr=["￥9.8-￥11.0","￥19.6-￥21.0","￥29.4-￥31.0","￥49.0-￥50.0",
+        "￥98.0-￥100.0","￥196.0-￥200.0","￥294.0-￥300.0","￥490.0-￥500.0"];
+    $("#main-box ul li").hover(function () {
+        var i=$(this).index();
+        console.log(i);
+        $("#main-box ul li a").removeClass("red");
+        $("#main-box ul li a").eq(i).addClass("red");
+        $(".jd-tab-box").css("display","none");
+        $(".jd-tab-box").eq(i).css("display","block");
+    });
+
+    $("#hf-mz").click(function (){
+        var i=$(this).val();
+        $("#hf-money").html(arr[i]);
+    })
+</script>
+</body>
+</html>
